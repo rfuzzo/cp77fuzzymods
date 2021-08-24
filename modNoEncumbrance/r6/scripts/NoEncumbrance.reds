@@ -16,7 +16,7 @@ public final func EvaluateEncumbrance() -> Void {
     ses = GameInstance.GetStatusEffectSystem(this.GetGame());
     overweightEffectID = t"BaseStatusEffect.Encumbered";
     hasEncumbranceEffect = ses.HasStatusEffect(this.GetEntityID(), overweightEffectID);
-    isApplyingRestricted = PlayerGameplayRestrictions.HasRestriction(this, n"NoEncumbrance");
+    isApplyingRestricted = StatusEffectSystem.ObjectHasStatusEffectWithTag(this, n"NoEncumbrance");
 
     //modNoEncumbarance++
     isApplyingRestricted = true;
