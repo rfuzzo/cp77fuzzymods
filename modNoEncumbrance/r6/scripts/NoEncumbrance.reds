@@ -1,6 +1,6 @@
 /// modNoEncumbarance
 /// by rfuzzo
-
+/// Version 1.3
 
 // -- PlayerPuppet
 @replaceMethod(PlayerPuppet)
