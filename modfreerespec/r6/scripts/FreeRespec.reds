@@ -11,6 +11,6 @@ public final const func GetTotalRespecCost() -> Int32 {
     //let singlePerkPrice: Int32 = Cast(TweakDBInterface.GetConstantStatModifierRecord(t"Price.RespecSinglePerk").Value());
     //let cost: Int32 = basePrice + singlePerkPrice * (this.GetSpentPerkPoints() + this.GetSpentTraitPoints());
 
-    return ;
+    return 0;
     //modFreeRespec--
   }
