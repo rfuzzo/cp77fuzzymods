@@ -1,10 +1,12 @@
 {
 	"folders": [
 		{
-			"path": "X:\\GitHub\\cyberpunk"
+			"name": "cp77fuzzymods",
+			"path": "."
 		},
 		{
-			"path": "."
+			"name": "cyberpunk",
+			"path": "X:\\GitHub\\cyberpunk"
 		}
 	],
 	"settings": {}
