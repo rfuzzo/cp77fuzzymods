@@ -108,12 +108,12 @@ private final func ProcessStateBasedAttributes() {
             this.SetAttribute(attributeType, Cast(calculatedAttributeValue));
 
 
-            let attributeBoughtEvent: ref<AttributeBoughtEvent>;
-            let gi: GameInstance = this.m_owner.GetGame();
-            attributeBoughtEvent = new AttributeBoughtEvent();
-            attributeBoughtEvent.attributeType = attributeType;
-            GameInstance.GetUISystem(gi).QueueEvent(attributeBoughtEvent);
-            // GameInstance.GetTelemetrySystem(gi).LogAttributeUpgraded(attributeType, RoundF(GameInstance.GetStatsSystem(gi).GetStatValue(Cast(this.m_owner.GetEntityID()), attributeType)));
+            // let attributeBoughtEvent: ref<AttributeBoughtEvent>;
+            // let gi: GameInstance = this.m_owner.GetGame();
+            // attributeBoughtEvent = new AttributeBoughtEvent();
+            // attributeBoughtEvent.attributeType = attributeType;
+            // GameInstance.GetUISystem(gi).QueueEvent(attributeBoughtEvent);
+            // // GameInstance.GetTelemetrySystem(gi).LogAttributeUpgraded(attributeType, RoundF(GameInstance.GetStatsSystem(gi).GetStatValue(Cast(this.m_owner.GetEntityID()), attributeType)));
 
         }
 
