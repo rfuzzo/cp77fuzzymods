@@ -1,8 +1,24 @@
 {
 	"folders": [
 		{
-			"name": "cp77fuzzymods",
-			"path": "."
+			"name": "modAlwaysDismember",
+			"path": "modAlwaysDismember"
+		},
+		{
+			"name": "modAttributeRespec",
+			"path": "modAttributeRespec"
+		},
+		{
+			"name": "modfreerespec",
+			"path": "modfreerespec"
+		},
+		{
+			"name": "modNoEncumbrance",
+			"path": "modNoEncumbrance"
+		},
+		{
+			"name": "modStateBasedAttributes",
+			"path": "modStateBasedAttributes"
 		},
 		{
 			"name": "cyberpunk",
