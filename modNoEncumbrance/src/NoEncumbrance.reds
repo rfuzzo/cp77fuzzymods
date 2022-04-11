@@ -22,7 +22,7 @@ public final func EvaluateEncumbrance() -> Void {
     isApplyingRestricted = true;
     //modNoEncumbarance--
 
-    carryCapacity = GameInstance.GetStatsSystem(this.GetGame()).GetStatValue(Cast(this.GetEntityID()), gamedataStatType.CarryCapacity);
+    carryCapacity = GameInstance.GetStatsSystem(this.GetGame()).GetStatValue(Cast<StatsObjectID>(this.GetEntityID()), gamedataStatType.CarryCapacity);
     if this.m_curInventoryWeight > carryCapacity && !isApplyingRestricted {
       this.SetWarningMessage(GetLocalizedText("UI-Notifications-Overburden"));
     };
