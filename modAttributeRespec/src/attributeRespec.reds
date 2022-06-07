@@ -11,8 +11,8 @@
 
 // --------------- PlayerDevelopmentData
 @wrapMethod(PlayerDevelopmentData)
-public final const func RemoveAllPerks() -> Void {
-  wrappedMethod();
+public final const func RemoveAllPerks(free: Bool) -> Void {
+  wrappedMethod(free);
 
   this.RemoveAllAttributes();
 }
