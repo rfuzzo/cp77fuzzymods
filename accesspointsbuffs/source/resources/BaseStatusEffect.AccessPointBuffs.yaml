@@ -1,0 +1,69 @@
+# durations
+# BlackLaceDuration               300s    5min
+# SatedDuration                   450s    7.5min
+# IllegalFoodDurations            600s    10min
+# LongLastingConsumableDuration   1800s   30min
+
+
+# RAM + 2
+BaseStatusEffect.Access_Point_Buff1:
+  $base: BaseStatusEffect.BuffStatusEffect
+  duration: Items.IllegalFoodDurations
+  uiData: 
+    $type: gamedataStatusEffectUIData_Record
+    description: LocKey#77745 # +{int_0} Max RAM Units
+    displayName: LocKey#43545 # from ramfood
+    iconPath: memory_booster_icon
+    intValues:
+      - 2
+  gameplayTags:
+    - Buff
+  packages:
+    - BaseStatusEffect.MemoryBooster_inline0 # +2 RAM
+
+# recovery rate
+BaseStatusEffect.Access_Point_Buff2:
+  $base: BaseStatusEffect.BuffStatusEffect
+  duration: Items.SatedDuration
+  uiData: 
+    $type: gamedataStatusEffectUIData_Record
+    description: LocKey#94492 # +{float_0}% RAM Recovery Rate
+    displayName: LocKey#43545 # from ramfood
+    iconPath: memory_replenishment
+    floatValues:
+      - 50
+  gameplayTags:
+    - Buff
+  packages:
+    - $type: gamedataGameplayLogicPackage_Record
+      stats:
+        - $type: gamedataConstantStatModifier_Record
+          value: 0.50
+          modifierType: Additive
+          statType: BaseStats.MemoryRegenRateMult
+
+
+# upload speed
+BaseStatusEffect.Access_Point_Buff3:
+  $base: BaseStatusEffect.BuffStatusEffect
+  duration: Items.BlackLaceDuration
+  uiData: 
+    $type: gamedataStatusEffectUIData_Record
+    description: LocKey#51361 # Reduces quickhack upload time by {int_0}%.
+    displayName: LocKey#43545 # from ramfood
+    iconPath: bzzzzzt
+    intValues:
+      - 20
+  gameplayTags:
+    - Buff
+  packages:
+    - $type: gamedataGameplayLogicPackage_Record
+      stats:
+        - $type: gamedataConstantStatModifier_Record
+          value: 0.2
+          modifierType: Additive
+          statType: BaseStats.QuickHackUploadTimeDecrease
+
+
+
+  

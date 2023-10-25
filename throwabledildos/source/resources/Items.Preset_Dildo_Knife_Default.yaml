@@ -1,0 +1,20 @@
+KnifeAttacks.DildoKnifeThrowAttackProjectile:
+  $base: KnifeAttacks.PunkKnifeThrowAttackProjectile
+  projectileTemplateName: dildo_knife
+
+
+Items.Preset_Dildo_Knife_Default:
+  $base: Items.Preset_Punk_Knife_Default
+  quality: Quality.Legendary
+  audioWeaponConfiguration: audio_melee_metadata_dildo
+  fxPackage: WeaponFxPackage.BluntSoftFxPackage
+  hudIcon: HUDWeaponIcons.DildoStout
+  appearanceResourceName: Preset_Dildo_Stout
+  blueprint: Items.Iconic_Melee_Blueprint
+  localizedDescription: LocKey#40464
+  displayName: LocKey#40309
+  projectileTemplateName: dildo_knife
+  visualTags:
+    - Stout_Dildo
+  attacks:
+    - !append KnifeAttacks.DildoKnifeThrowAttackProjectile

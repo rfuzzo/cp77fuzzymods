@@ -1,0 +1,146 @@
+# DamageHack
+Items.DamageHack.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.EMPOverloadProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.EMPOverloadLvl1Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.EMPOverloadLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.EMPOverloadLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.EMPOverloadLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.EMPOverloadLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.BrainMeltLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.BrainMeltLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.BrainMeltLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.BrainMeltLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.OverheatProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.OverheatLvl1Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.OverheatLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.OverheatLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.OverheatLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.OverheatLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.ContagionProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.ContagionLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.ContagionLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.ContagionLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.ContagionLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+# UltimateHack
+Items.UltimateHack.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.SuicideLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.SuicideLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.SuicideLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.GrenadeExplodeLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.GrenadeExplodeLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.GrenadeExplodeLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.SystemCollapseLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.SystemCollapseLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.SystemCollapseLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.MadnessLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.MadnessLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.MadnessLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+# UltimateHack
+Items.ControlHack.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+  
+Items.CommsNoiseProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.CommsNoiseLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.CommsNoiseLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.CommsNoiseLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.CommsNoiseLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.CommsCallInLvl1Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.CommsCallInLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.CommsCallInLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.CommsCallInLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.CommsCallInLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.WhistleLvl0Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.WhistleLvl1Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.WhistleLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.WhistleLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.WhistleLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.WhistleLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.PingProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.PingLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.PingLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.PingLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+Items.MemoryWipeLvl2Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.MemoryWipeLvl3Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.MemoryWipeLvl4Program.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.MemoryWipeLvl4PlusPlusProgram.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+
+# EP1
+Items.BlackWallProgramLvl2.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.BlackWallProgramLvl3.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot
+Items.BlackWallProgramLvl4.placementSlots:
+  - !append-once AttachmentSlots.NanoWiresQuickhackSlot

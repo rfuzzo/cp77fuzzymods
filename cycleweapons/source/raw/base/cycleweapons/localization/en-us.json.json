@@ -1,0 +1,46 @@
+{
+  "Header": {
+    "WolvenKitVersion": "8.11.1\u002B7300bf648abac090c5a0a5934d19e517c5e4fb18",
+    "WKitJsonVersion": "0.0.8",
+    "GameVersion": 2000,
+    "ExportedDateTime": "2023-10-24T15:00:48.9210512Z",
+    "DataType": "CR2W"
+  },
+  "Data": {
+    "Version": 195,
+    "BuildVersion": 0,
+    "RootChunk": {
+      "$type": "JsonResource",
+      "cookingPlatform": "PLATFORM_PC",
+      "root": {
+        "HandleId": "0",
+        "Data": {
+          "$type": "localizationPersistenceOnScreenEntries",
+          "entries": [
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "secondaryKey": "Mod-CycleWeapons-Burst",
+              "femaleVariant": "Burst"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "secondaryKey": "Mod-CycleWeapons-FullAuto",
+              "femaleVariant": "Full-Auto"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "secondaryKey": "Mod-CycleWeapons-SemiAuto",
+              "femaleVariant": "Semi-Auto"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
+              "secondaryKey": "Mod-CycleWeapons-Cycle",
+              "femaleVariant": "Change Trigger Mode"
+            }
+          ]
+        }
+      }
+    },
+    "EmbeddedFiles": []
+  }
+}

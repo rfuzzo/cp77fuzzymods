@@ -1,0 +1,126 @@
+# vanilla
+# Base_Yukimura
+# Base_Osprey
+# Preset_Osprey_Default
+# Preset_Warden_Boris
+
+# Handgun
+Items.Preset_Nue_Maiko:
+  primaryTriggerMode: TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.Burst
+  triggerModes:
+    - TriggerMode.SemiAuto
+    - TriggerMode.Burst
+
+# Shotgun
+Items.Preset_Igla_Sovereign:
+  primaryTriggerMode: TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Common_Igla_Sovereign:
+  primaryTriggerMode: TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Uncommon_Igla_Sovereign:
+  primaryTriggerMode: TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Rare_Igla_Sovereign:
+  primaryTriggerMode: TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Epic_Igla_Sovereign:
+  primaryTriggerMode: TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Legendary_Igla_Sovereign:
+  primaryTriggerMode: TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.Burst
+
+# Assault Rifle
+Items.Base_Hercules:
+  primaryTriggerMode: TriggerMode.FullAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Preset_Hercules_Default:
+  primaryTriggerMode: TriggerMode.FullAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Preset_Hercules_Pimp:
+  primaryTriggerMode: TriggerMode.FullAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Preset_Hercules_Neon:
+  primaryTriggerMode: TriggerMode.FullAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Preset_Hercules_Military:
+  primaryTriggerMode: TriggerMode.FullAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Preset_Hercules_Legendary:
+  primaryTriggerMode: TriggerMode.FullAuto
+  secondaryTriggerMode: TriggerMode.Burst
+Items.Preset_Hercules_Prototype:
+  primaryTriggerMode: TriggerMode.FullAuto
+  secondaryTriggerMode: TriggerMode.Burst
+# Items.VHard_50_IntRef_Weapon4:
+#   primaryTriggerMode: TriggerMode.FullAuto
+#   secondaryTriggerMode: TriggerMode.Burst
+# Items.VHard_50_IntTech_Weapon10:
+#   primaryTriggerMode: TriggerMode.FullAuto
+#   secondaryTriggerMode: TriggerMode.Burst
+
+
+# Assault Rifles
+# ARs generally have full auto and 3-round-burst
+Items.Base_Ajax_Burst_Stats:
+  $type: gamedataStatModifierGroup_Record
+  drawBasedOnStatType: False
+  optimiseCombinedModifiers: False
+  saveBasedOnStatType: False
+  statModsLimit: -1
+  relatedModifierGroups: []
+  statModifiers:
+    - $type: gamedataConstantStatModifier_Record
+      value: 0.133
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: gamedataConstantStatModifier_Record
+      value: 0.133
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: gamedataConstantStatModifier_Record
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: gamedataConstantStatModifier_Record
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+Items.$(name):
+  $instances:
+    - { name: Base_Ajax }
+    - { name: Craftable_Common_Ajax }
+    - { name: Craftable_Epic_Ajax }
+    - { name: Craftable_Legendary_Ajax }
+    - { name: Craftable_Rare_Ajax }
+    - { name: Craftable_Uncommon_Ajax }
+    - { name: Common_Ajax_Moron }
+    - { name: Epic_Ajax_Moron }
+    - { name: Legendary_Ajax_Moron }
+    - { name: Rare_Ajax_Moron }
+    - { name: Uncommon_Ajax_Moron }
+  secondaryTriggerMode: TriggerMode.Burst
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once: Items.Base_Ajax_Burst_Stats    
+Items.Preset_Ajax_$(name):
+  $instances:
+    - { name: Default }
+    - { name: Pimp }
+    - { name: Neon }
+    - { name: Military }
+    - { name: Training }
+    - { name: Krausser }
+    - { name: Moron }
+    - { name: Moron_Legendary }
+    - { name: Amazon }
+  secondaryTriggerMode: TriggerMode.Burst
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once: Items.Base_Ajax_Burst_Stats

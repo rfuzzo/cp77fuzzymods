@@ -1,0 +1,8 @@
+Character.PlayerCyberwareSystem_inline11:
+  $type: gamedataCombinedStatModifier_Record
+  opSymbol: '*'
+  refObject: Self
+  refStat: BaseStats.Level
+  value: 6
+  modifierType: Additive
+  statType: BaseStats.Humanity
