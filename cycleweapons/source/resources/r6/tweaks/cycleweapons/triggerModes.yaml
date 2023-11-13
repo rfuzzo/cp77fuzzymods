@@ -1,0 +1,986 @@
+####################################################################################################
+# Assault Rifles
+# ARs generally have full-auto and 3-round-burst
+# some have vanilla semi-auto, in that case I will make them semi and 3rb
+
+# Ajax vanilla  is full auto
+Items.Base_Ajax_Burst_Stats:
+  $base: Items.Base_Ajax_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.06 # 0.133
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.06
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Ajax }
+    - { name: Common_Ajax_Moron }
+    - { name: Craftable_Common_Ajax }
+    - { name: Craftable_Epic_Ajax }
+    - { name: Craftable_Legendary_Ajax }
+    - { name: Craftable_Rare_Ajax }
+    - { name: Craftable_Uncommon_Ajax }
+    - { name: Epic_Ajax_Moron }
+    - { name: Legendary_Ajax_Moron }
+    - { name: Preset_Ajax_Amazon }
+    - { name: Preset_Ajax_Default }
+    - { name: Preset_Ajax_Krausser }
+    - { name: Preset_Ajax_Military }
+    - { name: Preset_Ajax_Moron }
+    - { name: Preset_Ajax_Moron_Legendary }
+    - { name: Preset_Ajax_Neon }
+    - { name: Preset_Ajax_Pimp }
+    - { name: Preset_Ajax_Training }
+    - { name: Rare_Ajax_Moron }
+    - { name: Uncommon_Ajax_Moron }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Ajax_Burst_Stats
+
+# Copperhead vanilla is full auto
+Items.Base_Copperhead_Burst_Stats:
+  $base: Items.Base_Copperhead_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.04 # 0.09
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.04
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Copperhead }
+    - { name: Common_Copperhead_Genesis }
+    - { name: Craftable_Common_Copperhead }
+    - { name: Craftable_Epic_Copperhead }
+    - { name: Craftable_Legendary_Copperhead }
+    - { name: Craftable_Rare_Copperhead }
+    - { name: Craftable_Uncommon_Copperhead }
+    - { name: Epic_Copperhead_Genesis }
+    - { name: Legendary_Copperhead_Genesis }
+    - { name: Preset_Base_Copperhead }
+    - { name: Preset_Copperhead_Default }
+    - { name: Preset_Copperhead_Genesis }
+    - { name: Preset_Copperhead_Genesis_Epic }
+    - { name: Preset_Copperhead_Genesis_Legendary }
+    - { name: Preset_Copperhead_Krausser }
+    - { name: Preset_Copperhead_Military }
+    - { name: Preset_Copperhead_Military_Crowd }
+    - { name: Preset_Copperhead_Neon }
+    - { name: Preset_Copperhead_Pimp }
+    - { name: Preset_Copperhead_Prevention }
+    - { name: Rare_Copperhead_Genesis }
+    - { name: Uncommon_Copperhead_Genesis }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Copperhead_Burst_Stats
+
+# Kyubi vanilla is semi auto, we add 3rb
+Items.Base_Kyubi_Burst_Stats:
+  $base: Items.Base_Kyubi_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.09 #0.2
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.09
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Kyubi }
+    - { name: Craftable_Common_Kyubi }
+    - { name: Craftable_Epic_Kyubi }
+    - { name: Craftable_Legendary_Kyubi }
+    - { name: Craftable_Rare_Kyubi }
+    - { name: Craftable_Uncommon_Kyubi }
+    - { name: Preset_Kyubi_Amazon }
+    - { name: Preset_Kyubi_Default }
+    - { name: Preset_Kyubi_Krausser }
+    - { name: Preset_Kyubi_Legendary }
+    - { name: Preset_Kyubi_Military }
+    - { name: Preset_Kyubi_Military_Unbreakable }
+    - { name: Preset_Kyubi_Myers }
+    - { name: Preset_Kyubi_Neon }
+    - { name: Preset_Kyubi_Nusa }
+    - { name: Preset_Kyubi_Pimp }
+    - { name: Preset_Kyubi_Prevention }
+  triggerModes:
+    - TriggerMode.SemiAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Kyubi_Burst_Stats
+
+# Base_Masamune vanilla is 3-round-Burst, we add semi-auto
+# TODO check this
+Items.Base_Masamune_Technical_Stats:
+  statModifiers:
+    - !append 
+      $type: ConstantStatModifier
+      value: 0.18
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - !append
+      $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+Items.$(name):
+  $instances:
+    - { name: Base_Masamune }
+    - { name: Craftable_Common_Masamune }
+    - { name: Craftable_Epic_Masamune }
+    - { name: Craftable_Legendary_Masamune }
+    - { name: Craftable_Rare_Masamune }
+    - { name: Craftable_Uncommon_Masamune }
+    - { name: Preset_Base_Masamune }
+    - { name: Preset_Masamune_Arasaka_2020 }
+    - { name: Preset_Masamune_Arasaka_2077 }
+    - { name: Preset_Masamune_Arasaka_2077_Unbreakable }
+    - { name: Preset_Masamune_Default }
+    - { name: Preset_Masamune_Flashlight }
+    - { name: Preset_Masamune_Flashlight_Shadows }
+    - { name: Preset_Masamune_Military }
+    - { name: Preset_Masamune_Military_Unbreakable }
+    - { name: Preset_Masamune_Neon }
+    - { name: Preset_Masamune_Pimp }
+    - { name: Preset_Masamune_Rogue }
+    - { name: Preset_Masamune_Rogue_Stash }
+    - { name: Preset_Masamune_Trauma }
+  triggerModes:
+    - TriggerMode.Burst
+    - TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.SemiAuto
+
+# Base_Umbra
+Items.Base_Umbra_Burst_Stats:
+  $base: Items.Base_Umbra_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.04 # 0.08
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.04
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Umbra }
+    - { name: Craftable_Common_Umbra }
+    - { name: Craftable_Epic_Umbra }
+    - { name: Craftable_Legendary_Umbra }
+    - { name: Craftable_Rare_Umbra }
+    - { name: Craftable_Uncommon_Umbra }
+    - { name: Preset_Umbra_Bebe }
+    - { name: Preset_Umbra_Collectible }
+    - { name: Preset_Umbra_Default }
+    - { name: Preset_Umbra_Legendary }
+    - { name: Preset_Umbra_Military }
+    - { name: Preset_Umbra_Neon }
+    - { name: Preset_Umbra_Pimp }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Umbra_Burst_Stats
+
+# Base_Sidewinder
+Items.Base_Sidewinder_Burst_Stats:
+  $base: Items.Base_Sidewinder_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.05 # 0.1
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.05
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Sidewinder }
+    - { name: Craftable_Common_Sidewinder }
+    - { name: Craftable_Epic_Sidewinder }
+    - { name: Craftable_Legendary_Sidewinder }
+    - { name: Craftable_Rare_Sidewinder }
+    - { name: Craftable_Uncommon_Sidewinder }
+    - { name: Preset_Sidewinder_Default }
+    - { name: Preset_Sidewinder_Divided }
+    - { name: Preset_Sidewinder_Divided_Epic }
+    - { name: Preset_Sidewinder_Divided_Legendary }
+    - { name: Preset_Sidewinder_Military }
+    - { name: Preset_Sidewinder_Neon }
+    - { name: Preset_Sidewinder_Pimp }
+    - { name: mq008_golden_knuckledusters }
+    - { name: q115_rifle }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Sidewinder_Burst_Stats
+
+# Base_Hercules already has two trigger mode stats, we just enable it here
+# Items.$(name):
+#   $instances:
+#     - { name: Base_Hercules }
+#     - { name: Preset_Hercules_Default }
+#     - { name: Preset_Hercules_Legendary }
+#     - { name: Preset_Hercules_Military }
+#     - { name: Preset_Hercules_Neon }
+#     - { name: Preset_Hercules_Pimp }
+#     - { name: Preset_Hercules_Prototype }
+#   secondaryTriggerMode: TriggerMode.Burst
+
+####################################################################################################
+# SMGs all standardly have full-auto and burst modes
+
+# Base_Guillotine
+Items.Base_Guillotine_Burst_Stats:
+  $base: Items.Base_Guillotine_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.03 # 0.075
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.03
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Guillotine }
+    - { name: Craftable_Common_Guillotine }
+    - { name: Craftable_Epic_Guillotine }
+    - { name: Craftable_Legendary_Guillotine }
+    - { name: Craftable_Rare_Guillotine }
+    - { name: Craftable_Uncommon_Guillotine }
+    - { name: Preset_Guillotine_Collectible }
+    - { name: Preset_Guillotine_Default }
+    - { name: Preset_Guillotine_Default_Unbreakable }
+    - { name: Preset_Guillotine_Legendary }
+    - { name: Preset_Guillotine_Military }
+    - { name: Preset_Guillotine_Military_Unbreakable }
+    - { name: Preset_Guillotine_Neon }
+    - { name: Preset_Guillotine_Neon_Unbreakable }
+    - { name: Preset_Guillotine_Pimp }
+    - { name: Preset_Guillotine_Pimp_Unbreakable }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Guillotine_Burst_Stats
+
+# Base_Pulsar
+Items.Base_Pulsar_Burst_Stats:
+  $base: Items.Base_Pulsar_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.04 # 0.08
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.04
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Pulsar }
+    - { name: Common_Pulsar_Buzzsaw }
+    - { name: Craftable_Common_Pulsar }
+    - { name: Craftable_Epic_Pulsar }
+    - { name: Craftable_Legendary_Pulsar }
+    - { name: Craftable_Rare_Pulsar }
+    - { name: Craftable_Uncommon_Pulsar }
+    - { name: Epic_Pulsar_Buzzsaw }
+    - { name: Legendary_Pulsar_Buzzsaw }
+    - { name: Preset_Pulsar_Buzzsaw }
+    - { name: Preset_Pulsar_Buzzsaw_Epic }
+    - { name: Preset_Pulsar_Buzzsaw_Legendary }
+    - { name: Preset_Pulsar_Default }
+    - { name: Preset_Pulsar_Default_Unbreakable }
+    - { name: Preset_Pulsar_Military }
+    - { name: Preset_Pulsar_Military_Crowd }
+    - { name: Preset_Pulsar_Military_Unbreakable }
+    - { name: Preset_Pulsar_Neon }
+    - { name: Preset_Pulsar_Neon_Unbreakable }
+    - { name: Preset_Pulsar_Pimp }
+    - { name: Preset_Pulsar_Pimp_Unbreakable }
+    - { name: Rare_Pulsar_Buzzsaw }
+    - { name: Uncommon_Pulsar_Buzzsaw }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Pulsar_Burst_Stats
+
+# Base_Saratoga
+Items.Base_Saratoga_Burst_Stats:
+  $base: Items.Base_Saratoga_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.03 # 0.066
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.03
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Saratoga }
+    - { name: Craftable_Common_Saratoga }
+    - { name: Craftable_Epic_Saratoga }
+    - { name: Craftable_Legendary_Saratoga }
+    - { name: Craftable_Rare_Saratoga }
+    - { name: Craftable_Uncommon_Saratoga }
+    - { name: Preset_Saratoga_Arasaka_2020 }
+    - { name: Preset_Saratoga_Arasaka_2077 }
+    - { name: Preset_Saratoga_Arasaka_2077_Unbreakable }
+    - { name: Preset_Saratoga_Default }
+    - { name: Preset_Saratoga_Default_Unbreakable }
+    - { name: Preset_Saratoga_Krausser }
+    - { name: Preset_Saratoga_Maelstrom }
+    - { name: Preset_Saratoga_Maelstrom_Epic }
+    - { name: Preset_Saratoga_Maelstrom_Legendary }
+    - { name: Preset_Saratoga_Military }
+    - { name: Preset_Saratoga_Military_Unbreakable }
+    - { name: Preset_Saratoga_Neon }
+    - { name: Preset_Saratoga_Neon_Unbreakable }
+    - { name: Preset_Saratoga_Pimp }
+    - { name: Preset_Saratoga_Pimp_Unbreakable }
+    - { name: Preset_Saratoga_Raffen }
+    - { name: Preset_Saratoga_Raffen_Epic }
+    - { name: Preset_Saratoga_Raffen_Legendary }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Saratoga_Burst_Stats
+
+# Base_Borg4a
+# Items.Base_Borg4a_Burst_Stats:
+#   $base: Items.Base_Borg4a_Technical_Stats
+#   statModifiers:
+#     - $type: ConstantStatModifier
+#       value: 0.08 # 0.166
+#       modifierType: Additive
+#       statType: BaseStats.CycleTime_Burst
+#     - $type: ConstantStatModifier
+#       value: 0.08
+#       modifierType: Additive
+#       statType: BaseStats.CycleTime_BurstSecondary
+#     - $type: ConstantStatModifier
+#       value: 3
+#       modifierType: Additive
+#       statType: BaseStats.NumShotsInBurst
+#     - $type: ConstantStatModifier
+#       value: 3
+#       modifierType: Additive
+#       statType: BaseStats.NumShotsInBurstSecondary
+#     - BaseStats.ProjectilesPerShotCombinedModifier
+# Items.$(name):
+#   $instances:
+#     - { name: Base_Borg4a }
+#     - { name: Common_Borg4a_HauntedGun }
+#     - { name: Epic_Borg4a_HauntedGun }
+#     - { name: Legendary_Borg4a_HauntedGun }
+#     - { name: Preset_Borg4a_Default }
+#     - { name: Preset_Borg4a_HauntedGun }
+#     - { name: Preset_Borg4a_Legendary }
+#     - { name: Preset_Borg4a_Military }
+#     - { name: Preset_Borg4a_Neon }
+#     - { name: Preset_Borg4a_Pimp }
+#     - { name: Rare_Borg4a_HauntedGun }
+#     - { name: Uncommon_Borg4a_HauntedGun }
+#   triggerModes:
+#     - TriggerMode.FullAuto
+#     - TriggerMode.Burst
+#   secondaryTriggerMode: TriggerMode.Burst
+#   statModifierGroups: 
+#     - !append-once Items.Base_Borg4a_Burst_Stats
+
+# Base_Senkoh has already two trigger modes: burst and charge, we don't change that
+
+# Base_Dian has already full auto and burst, we enable switching
+# has slightly low burst speed
+Items.$(name):
+  $instances:
+    - { name: Base_Dian }
+    - { name: Common_Dian_Yinglong }
+    - { name: Craftable_Common_Dian }
+    - { name: Craftable_Epic_Dian }
+    - { name: Craftable_Legendary_Dian }
+    - { name: Craftable_Rare_Dian }
+    - { name: Craftable_Uncommon_Dian }
+    - { name: Epic_Dian_Yinglong }
+    - { name: Legendary_Dian_Yinglong }
+    - { name: Preset_Dian_Default }
+    - { name: Preset_Dian_Default_Unbreakable }
+    - { name: Preset_Dian_Military }
+    - { name: Preset_Dian_Military_Unbreakable }
+    - { name: Preset_Dian_Neon }
+    - { name: Preset_Dian_Neon_Unbreakable }
+    - { name: Preset_Dian_Pimp }
+    - { name: Preset_Dian_Pimp_Unbreakable }
+    - { name: Preset_Dian_Trauma }
+    - { name: Preset_Dian_Yinglong }
+    - { name: Rare_Dian_Yinglong }
+    - { name: Uncommon_Dian_Yinglong }
+  secondaryTriggerMode: TriggerMode.Burst
+
+# Base_Shingen vanilla is semi-auto and already has burst stats, we add 3rb,
+# TODO check this
+Items.Base_Shingen_Technical_Stats:
+  statModifiers:
+    - !append 
+      $type: ConstantStatModifier
+      value: 0.15
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - !append
+      $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+Items.$(name):
+  $instances:
+    - { name: Base_Shingen }
+    - { name: Craftable_Common_Shingen }
+    - { name: Craftable_Epic_Shingen }
+    - { name: Craftable_Legendary_Shingen }
+    - { name: Craftable_Rare_Shingen }
+    - { name: Craftable_Uncommon_Shingen }
+    - { name: Oda_Shingen }
+    - { name: Preset_Shingen_Default }
+    - { name: Preset_Shingen_Military }
+    - { name: Preset_Shingen_Military_Unbreakable }
+    - { name: Preset_Shingen_Neon }
+    - { name: Preset_Shingen_Pimp }
+    - { name: Preset_Shingen_Prototype }
+  triggerModes:
+    - TriggerMode.SemiAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+
+# Base_Warden
+Items.Base_Warden_Burst_Stats:
+  $base: Items.Base_Warden_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.1 # 0.2
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.1
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Warden }
+    - { name: Craftable_Common_Warden }
+    - { name: Craftable_Epic_Warden }
+    - { name: Craftable_Legendary_Warden }
+    - { name: Craftable_Rare_Warden }
+    - { name: Craftable_Uncommon_Warden }
+    - { name: Preset_Warden_Amazon }
+#    - { name: Preset_Warden_Boris }  # Preset_Warden_Boris already has burst mode, this mod enables it
+    - { name: Preset_Warden_Default }
+    - { name: Preset_Warden_Krausser }
+    - { name: Preset_Warden_Legendary }
+    - { name: Preset_Warden_Military }
+    - { name: Preset_Warden_Neon }
+    - { name: Preset_Warden_Pimp }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Warden_Burst_Stats
+
+####################################################################################################
+# Handguns may have trigger modes
+# for now only add burst fire to full-auto handguns
+
+# POWER
+# Base_Lexington is full-auto, we add 3rb
+Items.Base_Lexington_Burst_Stats:
+  $base: Items.Base_Lexington_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.06 # 0.125
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.06
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Lexington }
+    - { name: Craftable_Common_Lexington }
+    - { name: Craftable_Epic_Lexington }
+    - { name: Craftable_Legendary_Lexington }
+    - { name: Craftable_Rare_Lexington }
+    - { name: Craftable_Uncommon_Lexington }
+    - { name: Preset_Base_Lexington }
+    - { name: Preset_Base_Lexington_Left_Hand }
+    - { name: Preset_Lexington_Default }
+    - { name: Preset_Lexington_Default_Left_Hand }
+    - { name: Preset_Lexington_Default_Retrofix }
+    - { name: Preset_Lexington_Krausser }
+    - { name: Preset_Lexington_Krausser_Jago }
+    - { name: Preset_Lexington_Krausser_Jurij }
+    - { name: Preset_Lexington_Military }
+    - { name: Preset_Lexington_Military_Left_Hand }
+    - { name: Preset_Lexington_Military_Retrofix }
+    - { name: Preset_Lexington_Neon }
+    - { name: Preset_Lexington_Neon_Left_Hand }
+    - { name: Preset_Lexington_Neon_Retrofix }
+    - { name: Preset_Lexington_Pimp }
+    - { name: Preset_Lexington_Pimp_Left_Hand }
+    - { name: Preset_Lexington_Pimp_Left_Hand_2 }
+    - { name: Preset_Lexington_Pimp_Retrofix }
+    - { name: Preset_Lexington_Prevention }
+    - { name: Preset_Lexington_Rook }
+    - { name: Preset_Lexington_Shooting_Competition }
+    - { name: Preset_Lexington_Toygun }
+    - { name: Preset_Lexington_Toygun_Left_Hand }
+    - { name: Preset_Lexington_Training }
+    - { name: Preset_Lexington_Wilson }
+    - { name: Preset_Lexington_Wilson_Epic }
+    - { name: Preset_Lexington_Wilson_Legendary }
+    - { name: Preset_Lexington_Wilson_Rare }
+    - { name: Preset_Q001_Lexington }
+    - { name: SemiAuto_Lexington }
+    - { name: Silenced_Lexington }
+    - { name: mq011_wilson_gun }
+    - { name: q115_pistol }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Lexington_Burst_Stats
+
+# Base_Liberty is semi-auto
+
+# Base_Nue is semi-auto
+
+# Preset_Nue_Maiko already has full auto and burst, this mod enables it
+# TODO check this
+Items.Preset_Nue_Maiko.primaryTriggerMode: TriggerMode.SemiAuto
+
+# Base_Slaughtomatic is full-auto and already has burst stats
+# Items.$(name):
+#   $instances:
+#     - { name: Base_Slaughtomatic }
+#     - { name: Preset_Base_Slaughtomatic }
+#     - { name: Preset_Base_Slaughtomatic_Left_Hand }
+#   triggerModes:
+#     - TriggerMode.FullAuto
+#     - TriggerMode.Burst
+#   secondaryTriggerMode: TriggerMode.Burst
+
+# Base_Unity is semi-auto
+
+# TECH
+# Base_Kenshin has charge trigger mode
+
+# Base_Omaha has charge trigger mode
+
+# Base_Grit has charge trigger mode
+
+# Base_Ticon has charge trigger mode
+
+# SMART
+
+# Base_Chao is full-auto and shoots in bursts
+# Items.Base_Chao_Technical_Stats:
+#   statModifiers:
+#     - !append 
+#       $type: ConstantStatModifier
+#       value: 0.1
+#       modifierType: Additive
+#       statType: BaseStats.CycleTime_BurstSecondary
+#     - !append
+#       $type: ConstantStatModifier
+#       value: 3
+#       modifierType: Additive
+#       statType: BaseStats.NumShotsInBurstSecondary
+# Items.$(name):
+#   $instances:
+#     - { name: Base_Chao }
+#     - { name: BlackwallForce }
+#     - { name: Craftable_Common_Chao }
+#     - { name: Craftable_Epic_Chao }
+#     - { name: Craftable_Legendary_Chao }
+#     - { name: Craftable_Rare_Chao }
+#     - { name: Craftable_Uncommon_Chao }
+#     - { name: Preset_Chao_Default }
+#     - { name: Preset_Chao_Default_Left_Hand }
+#     - { name: Preset_Chao_Default_Retrofix }
+#     - { name: Preset_Chao_Military }
+#     - { name: Preset_Chao_Military_Left_Hand }
+#     - { name: Preset_Chao_Military_Retrofix }
+#     - { name: Preset_Chao_Neon }
+#     - { name: Preset_Chao_Neon_Left_Hand }
+#     - { name: Preset_Chao_Neon_Retrofix }
+#     - { name: Preset_Chao_Pimp }
+#     - { name: Preset_Chao_Pimp_Left_Hand }
+#     - { name: Preset_Chao_Pimp_Retrofix }
+#     - { name: Preset_Chao_VooDoo }
+#     - { name: Preset_Chao_Workspot }
+#   triggerModes:
+#     - TriggerMode.FullAuto
+#     - TriggerMode.Burst
+#   secondaryTriggerMode: TriggerMode.Burst
+
+# Base_Kappa is full-auto
+Items.Base_Kappa_Burst_Stats:
+  $base: Items.Base_Kappa_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.05 # 0.12
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.05
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 3
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Kappa }
+    - { name: Craftable_Common_Kappa }
+    - { name: Craftable_Epic_Kappa }
+    - { name: Craftable_Legendary_Kappa }
+    - { name: Craftable_Rare_Kappa }
+    - { name: Craftable_Uncommon_Kappa }
+    - { name: Preset_Kappa_Default }
+    - { name: Preset_Kappa_Default_Left_Hand }
+    - { name: Preset_Kappa_Default_Retrofix }
+    - { name: Preset_Kappa_George }
+    - { name: Preset_Kappa_Legendary }
+    - { name: Preset_Kappa_Military }
+    - { name: Preset_Kappa_Military_Left_Hand }
+    - { name: Preset_Kappa_Military_Retrofix }
+    - { name: Preset_Kappa_Military_Unbreakable }
+    - { name: Preset_Kappa_Neon }
+    - { name: Preset_Kappa_Neon_Left_Hand }
+    - { name: Preset_Kappa_Neon_Retrofix }
+    - { name: Preset_Kappa_Pimp }
+    - { name: Preset_Kappa_Pimp_Left_Hand }
+    - { name: Preset_Kappa_Pimp_Retrofix }
+    - { name: Preset_Kappa_Workspot }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Kappa_Burst_Stats
+
+# Base_Yukimura already has full auto and burst, this mod enables switching
+
+# Base_Silverhand has charge
+
+
+####################################################################################################
+# Revolvers should not have trigger modes
+
+####################################################################################################
+# Shotguns should not have trigger modes but it may be fun for some
+
+# POWER
+# Base_Crusher is full auto
+Items.Base_Crusher_Burst_Stats:
+  $base: Items.Base_Crusher_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.2 #0.4
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.2 #0.4
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 2
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 2
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Crusher }
+    - { name: Craftable_Common_Crusher }
+    - { name: Craftable_Epic_Crusher }
+    - { name: Craftable_Legendary_Crusher }
+    - { name: Craftable_Rare_Crusher }
+    - { name: Craftable_Uncommon_Crusher }
+    - { name: Preset_Crusher_Amazon }
+    - { name: Preset_Crusher_Default }
+    - { name: Preset_Crusher_Default_Left_Hand }
+    - { name: Preset_Crusher_Default_Retrofix }
+    - { name: Preset_Crusher_Krausser }
+    - { name: Preset_Crusher_Military }
+    - { name: Preset_Crusher_Military_Left_Hand }
+    - { name: Preset_Crusher_Military_Retrofix }
+    - { name: Preset_Crusher_Neon }
+    - { name: Preset_Crusher_Neon_Left_Hand }
+    - { name: Preset_Crusher_Neon_Retrofix }
+    - { name: Preset_Crusher_Pimp }
+    - { name: Preset_Crusher_Pimp_Left_Hand }
+    - { name: Preset_Crusher_Pimp_Retrofix }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Crusher_Burst_Stats
+
+# Base_Pozhar is full auto
+Items.Base_Pozhar_Burst_Stats:
+  $base: Items.Base_Pozhar_Technical_Stats
+  statModifiers:
+    - $type: ConstantStatModifier
+      value: 0.12 #0.28
+      modifierType: Additive
+      statType: BaseStats.CycleTime_Burst
+    - $type: ConstantStatModifier
+      value: 0.12 #0.28
+      modifierType: Additive
+      statType: BaseStats.CycleTime_BurstSecondary
+    - $type: ConstantStatModifier
+      value: 2
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurst
+    - $type: ConstantStatModifier
+      value: 2
+      modifierType: Additive
+      statType: BaseStats.NumShotsInBurstSecondary
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Pozhar }
+    - { name: Craftable_Common_Pozhar }
+    - { name: Craftable_Epic_Pozhar }
+    - { name: Craftable_Legendary_Pozhar }
+    - { name: Craftable_Rare_Pozhar }
+    - { name: Craftable_Uncommon_Pozhar }
+    - { name: Preset_Pozhar_AirDrop }
+    - { name: Preset_Pozhar_Default }
+    - { name: Preset_Pozhar_Legendary }
+    - { name: Preset_Pozhar_Military }
+    - { name: Preset_Pozhar_Neon }
+    - { name: Preset_Pozhar_Pimp }
+  triggerModes:
+    - TriggerMode.FullAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Pozhar_Burst_Stats
+
+# Base_Carnage already has trigger mode stats semi and full-auto, we enable switching
+Items.$(name):
+  $instances:
+    - { name: Base_Carnage }
+    - { name: Craftable_Common_Carnage }
+    - { name: Craftable_Epic_Carnage }
+    - { name: Craftable_Legendary_Carnage }
+    - { name: Craftable_Rare_Carnage }
+    - { name: Craftable_Uncommon_Carnage }
+    - { name: Preset_Carnage_Default }
+    - { name: Preset_Carnage_Edgerunners }
+    - { name: Preset_Carnage_Edgerunners_Legendary }
+    - { name: Preset_Carnage_Military }
+    - { name: Preset_Carnage_Mox }
+    - { name: Preset_Carnage_Mox_Epic }
+    - { name: Preset_Carnage_Mox_Legendary }
+    - { name: Preset_Carnage_Neon }
+    - { name: Preset_Carnage_Pimp }
+  secondaryTriggerMode: TriggerMode.FullAuto
+
+# Base_Tactician is semi-auto
+
+# SMART
+# Base_Zhuo is semi-auto
+
+####################################################################################################
+# Dual Shotguns should not have trigger modes but it may be fun for some
+
+#POWER
+# Base_Igla is semi-auto
+# Preset_Igla_Sovereign already has burst mode, we enable semi-auto
+Items.$(name):
+  $instances:
+    - { name: Preset_Igla_Sovereign }
+    - { name: Common_Igla_Sovereign }
+    - { name: Epic_Igla_Sovereign }
+    - { name: Legendary_Igla_Sovereign }
+    - { name: Preset_Igla_Sovereign_Legendary }
+    - { name: Rare_Igla_Sovereign }
+    - { name: Uncommon_Igla_Sovereign }
+  primaryTriggerMode: TriggerMode.SemiAuto
+
+# Base_Testera is semi-auto
+
+# TECH
+# Base_Satara only has charge mode
+
+# SMART
+# Base_Palica is semi-auto
+
+####################################################################################################
+# Snipers should not have trigger modes but it may be fun for some
+
+# POWER
+# Base_Grad is semi-auto
+
+# Base_RocketLauncher has semi-auto and charge
+
+# Base_Osprey already has full-auto and burst
+
+# TECH
+# Base_Nekomata has charge
+
+# Items.Base_Rasetsu has semi-auto and charge
+
+# SMART
+# Base_Ashura is semi-auto
+
+####################################################################################################
+# LMGs should not have trigger modes but it may be fun for some
+
+# Base_Defender is FA
+
+# Base_MA70 is FA
+
+####################################################################################################
+# Rifles should not have trigger modes but it may be fun for some
+
+# Base_Kolac is SemiAuto
+
+# Base_Sor22 is SemiAuto
+
+# Base_Achilles has SemiAuto and charge
