@@ -152,8 +152,8 @@ Items.$(name):
   statModifierGroups: 
     - !append-once Items.Base_Kyubi_Burst_Stats
 
-# Base_Masamune vanilla is 3-round-Burst, we add semi-auto
-# TODO check this
+# Base_Masamune vanilla is 3-round-Burst, we add FullAuto
+# TODO this sounds a bit off in full-auto
 Items.Base_Masamune_Technical_Stats:
   statModifiers:
     - !append 
@@ -190,8 +190,8 @@ Items.$(name):
     - { name: Preset_Masamune_Trauma }
   triggerModes:
     - TriggerMode.Burst
-    - TriggerMode.SemiAuto
-  secondaryTriggerMode: TriggerMode.SemiAuto
+    - TriggerMode.FullAuto
+  secondaryTriggerMode: TriggerMode.FullAuto
 
 # Base_Umbra
 Items.Base_Umbra_Burst_Stats:
@@ -521,7 +521,6 @@ Items.$(name):
   secondaryTriggerMode: TriggerMode.Burst
 
 # Base_Shingen vanilla is semi-auto and already has burst stats, we add 3rb,
-# TODO check this
 Items.Base_Shingen_Technical_Stats:
   statModifiers:
     - !append 
@@ -677,7 +676,6 @@ Items.$(name):
 # Base_Nue is semi-auto
 
 # Preset_Nue_Maiko already has full auto and burst, this mod enables it
-# TODO check this
 Items.Preset_Nue_Maiko.primaryTriggerMode: TriggerMode.SemiAuto
 
 # Base_Slaughtomatic is full-auto and already has burst stats
