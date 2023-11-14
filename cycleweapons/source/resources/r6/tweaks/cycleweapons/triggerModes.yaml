@@ -449,6 +449,7 @@ Items.$(name):
   statModifierGroups: 
     - !append-once Items.Base_Saratoga_Burst_Stats
 
+# ep1
 # Base_Borg4a
 # Items.Base_Borg4a_Burst_Stats:
 #   $base: Items.Base_Borg4a_Technical_Stats
@@ -553,6 +554,7 @@ Items.$(name):
     - TriggerMode.Burst
   secondaryTriggerMode: TriggerMode.Burst
 
+# ep1
 # Base_Warden
 Items.Base_Warden_Burst_Stats:
   $base: Items.Base_Warden_Technical_Stats

@@ -88,9 +88,13 @@ protected final func OnEnter(stateContext: ref<StateContext>, scriptInterface: r
   
   wrappedMethod(stateContext, scriptInterface);
 
+  // refresh button hints
   PlayerGameplayRestrictions.PushForceRefreshInputHintsEventToPSM(player);
+  // play sound
+  GameObject.PlaySoundEvent(scriptInterface.executionOwner, n"w_gun_pistol_power_unity_trigger");
 }
 
+// refresh button hints
 @wrapMethod(ReadyEvents)
 protected final func OnEnter(stateContext: ref<StateContext>, scriptInterface: ref<StateGameScriptInterface>) -> Void {
   let player: ref<PlayerPuppet> = scriptInterface.executionOwner as PlayerPuppet;
