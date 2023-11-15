@@ -1,6 +1,6 @@
 // Mod Cycle trigger modes
 // by rfuzzo
-// v1.1.2
+// v1.1.3
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // InputContextTransitionEvents
@@ -198,6 +198,8 @@ protected final func OnEnter(stateContext: ref<StateContext>, scriptInterface: r
 
 @addField(WeaponObject)
 let m_triggerMode : gamedataTriggerMode;
+@addField(WeaponObject)
+let m_triggerModeSet : Bool;
 
 @addMethod(WeaponObject)
 protected cb func OnWeaponChangeTriggerMode(evt: ref<WeaponChangeTriggerModeEvent>) -> Void {
@@ -208,5 +210,8 @@ protected cb func OnWeaponChangeTriggerMode(evt: ref<WeaponChangeTriggerModeEven
 protected cb func OnGameAttached() -> Bool {
   wrappedMethod();
 
-  this.m_triggerMode = this.m_weaponRecord.PrimaryTriggerMode().Type();
+  if !this.m_triggerModeSet {
+    this.m_triggerMode = this.m_weaponRecord.PrimaryTriggerMode().Type();
+    this.m_triggerModeSet = true;
+  }
 }
