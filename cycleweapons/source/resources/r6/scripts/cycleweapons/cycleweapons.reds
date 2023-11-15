@@ -1,6 +1,6 @@
 // Mod Cycle trigger modes
 // by rfuzzo
-// v1.1.1
+// v1.1.2
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // InputContextTransitionEvents
@@ -48,6 +48,11 @@ protected final const func ShowRangedInputHints(stateContext: ref<StateContext>,
     // FullAuto
     if this.IsTriggerModeActive(scriptInterface, gamedataTriggerMode.FullAuto) {
       this.ShowInputHint(scriptInterface, n"CycleTrigger", n"Ranged", GetLocalizedTextByKey(n"Mod-CycleWeapons-FullAuto"), inkInputHintHoldIndicationType.FromInputConfig, true, 1);
+      stateContext.SetPermanentBoolParameter(n"isCycleTriggerInputHintDisplayed", true, true);
+    };
+    // Charge
+    if this.IsTriggerModeActive(scriptInterface, gamedataTriggerMode.Charge) {
+      this.ShowInputHint(scriptInterface, n"CycleTrigger", n"Ranged", GetLocalizedTextByKey(n"Mod-CycleWeapons-Charge"), inkInputHintHoldIndicationType.FromInputConfig, true, 1);
       stateContext.SetPermanentBoolParameter(n"isCycleTriggerInputHintDisplayed", true, true);
     };
   };
@@ -203,5 +208,5 @@ protected cb func OnWeaponChangeTriggerMode(evt: ref<WeaponChangeTriggerModeEven
 protected cb func OnGameAttached() -> Bool {
   wrappedMethod();
 
-  this.m_triggerMode = this.GetCurrentTriggerMode().Type();
+  this.m_triggerMode = this.m_weaponRecord.PrimaryTriggerMode().Type();
 }

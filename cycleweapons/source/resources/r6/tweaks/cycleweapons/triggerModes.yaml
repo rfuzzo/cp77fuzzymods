@@ -1,6 +1,6 @@
 # Mod Cycle trigger modes
 # by rfuzzo
-# v1.1.1
+# v1.1.2
 
 
 ####################################################################################################
@@ -12,22 +12,14 @@
 Items.Base_Ajax_Burst_Stats:
   $base: Items.Base_Ajax_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.06 # 0.133
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.06
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -62,22 +54,14 @@ Items.$(name):
 Items.Base_Copperhead_Burst_Stats:
   $base: Items.Base_Copperhead_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.04 # 0.09
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.04
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -114,22 +98,14 @@ Items.$(name):
 Items.Base_Kyubi_Burst_Stats:
   $base: Items.Base_Kyubi_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.09 #0.2
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.09
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -161,15 +137,11 @@ Items.$(name):
 Items.Base_Masamune_Technical_Stats:
   statModifiers:
     - !append 
-      $type: ConstantStatModifier
+      $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.18
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - !append
-      $type: ConstantStatModifier
+    - !append 
+      $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
 Items.$(name):
   $instances:
     - { name: Base_Masamune }
@@ -201,22 +173,14 @@ Items.$(name):
 Items.Base_Umbra_Burst_Stats:
   $base: Items.Base_Umbra_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.04 # 0.08
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.04
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -244,22 +208,14 @@ Items.$(name):
 Items.Base_Sidewinder_Burst_Stats:
   $base: Items.Base_Sidewinder_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.05 # 0.1
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.05
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -304,22 +260,14 @@ Items.$(name):
 Items.Base_Guillotine_Burst_Stats:
   $base: Items.Base_Guillotine_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.03 # 0.075
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.03
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -350,22 +298,14 @@ Items.$(name):
 Items.Base_Pulsar_Burst_Stats:
   $base: Items.Base_Pulsar_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.04 # 0.08
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.04
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -403,22 +343,14 @@ Items.$(name):
 Items.Base_Saratoga_Burst_Stats:
   $base: Items.Base_Saratoga_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.03 # 0.066
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.03
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -529,15 +461,11 @@ Items.$(name):
 Items.Base_Shingen_Technical_Stats:
   statModifiers:
     - !append 
-      $type: ConstantStatModifier
+      $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.15
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - !append
-      $type: ConstantStatModifier
+    - !append 
+      $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
 Items.$(name):
   $instances:
     - { name: Base_Shingen }
@@ -563,22 +491,14 @@ Items.$(name):
 Items.Base_Warden_Burst_Stats:
   $base: Items.Base_Warden_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.1 # 0.2
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.1
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -612,22 +532,14 @@ Items.$(name):
 Items.Base_Lexington_Burst_Stats:
   $base: Items.Base_Lexington_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.06 # 0.125
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.06
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -753,22 +665,14 @@ Items.Preset_Nue_Maiko.primaryTriggerMode: TriggerMode.SemiAuto
 Items.Base_Kappa_Burst_Stats:
   $base: Items.Base_Kappa_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.05 # 0.12
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.05
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -817,22 +721,14 @@ Items.$(name):
 Items.Base_Crusher_Burst_Stats:
   $base: Items.Base_Crusher_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.2 #0.4
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.2 #0.4
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 2
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 2
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -867,22 +763,14 @@ Items.$(name):
 Items.Base_Pozhar_Burst_Stats:
   $base: Items.Base_Pozhar_Technical_Stats
   statModifiers:
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstModifier
       value: 0.12 #0.28
-      modifierType: Additive
-      statType: BaseStats.CycleTime_Burst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
       value: 0.12 #0.28
-      modifierType: Additive
-      statType: BaseStats.CycleTime_BurstSecondary
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstModifier
       value: 2
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurst
-    - $type: ConstantStatModifier
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 2
-      modifierType: Additive
-      statType: BaseStats.NumShotsInBurstSecondary
     - BaseStats.ProjectilesPerShotCombinedModifier
 Items.$(name):
   $instances:
@@ -935,6 +823,37 @@ Items.$(name):
 
 #POWER
 # Base_Igla is semi-auto
+Items.Base_Igla_Technical_Stats:
+  statModifiers:
+    - !append 
+      $base: BaseStats.NumShotsInBurstModifier
+      value: 2
+    - !append 
+      $base: BaseStats.NumShotsInBurstSecondaryModifier
+      value: 2
+    - !append 
+      $base: BaseStats.CycleTime_BurstModifier
+      value: 0.01
+    - !append 
+      $base: BaseStats.CycleTime_BurstSecondaryModifier
+      value: 0.01
+Items.$(name):
+  $instances:
+    - { name: Base_Igla }
+    - { name: Craftable_Common_Igla }
+    - { name: Craftable_Epic_Igla }
+    - { name: Craftable_Legendary_Igla }
+    - { name: Craftable_Rare_Igla }
+    - { name: Craftable_Uncommon_Igla }
+    - { name: Preset_Igla_Default }
+    - { name: Preset_Igla_Military }
+    - { name: Preset_Igla_Neon }
+    - { name: Preset_Igla_Pimp }
+  triggerModes:
+    - TriggerMode.SemiAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+
 # Preset_Igla_Sovereign already has burst mode, we enable semi-auto
 Items.$(name):
   $instances:
@@ -948,12 +867,94 @@ Items.$(name):
   primaryTriggerMode: TriggerMode.SemiAuto
 
 # Base_Testera is semi-auto
+Items.Base_Testera_Technical_Stats:
+  statModifiers:
+    - !append 
+      $base: BaseStats.NumShotsInBurstModifier
+      value: 2
+    - !append 
+      $base: BaseStats.NumShotsInBurstSecondaryModifier
+      value: 2
+    - !append 
+      $base: BaseStats.CycleTime_BurstModifier
+      value: 0.01
+    - !append 
+      $base: BaseStats.CycleTime_BurstSecondaryModifier
+      value: 0.01
+    - !append 
+      $base: BaseStats.NumShotsToFireModifier
+      value: -1
+Items.$(name):
+  $instances:
+    - { name: Base_Testera }
+    - { name: Craftable_Common_Testera }
+    - { name: Craftable_Epic_Testera }
+    - { name: Craftable_Legendary_Testera }
+    - { name: Craftable_Rare_Testera }
+    - { name: Craftable_Uncommon_Testera }
+    - { name: Preset_Testera_Default }
+    - { name: Preset_Testera_Military }
+    - { name: Preset_Testera_Neon }
+    - { name: Preset_Testera_Nicolas }
+    - { name: Preset_Testera_Pimp }
+  triggerModes:
+    - TriggerMode.SemiAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
 
 # TECH
 # Base_Satara only has charge mode
+Items.$(name):
+  $instances:
+    - { name: Base_Satara }
+    - { name: Craftable_Common_Satara }
+    - { name: Craftable_Epic_Satara }
+    - { name: Craftable_Legendary_Satara }
+    - { name: Craftable_Rare_Satara }
+    - { name: Craftable_Uncommon_Satara }
+    - { name: Preset_Satara_Brick }
+    - { name: Preset_Satara_Default }
+    - { name: Preset_Satara_Military }
+    - { name: Preset_Satara_Neon }
+    - { name: Preset_Satara_Pimp }
+  triggerModes:
+    - TriggerMode.Charge
+    - TriggerMode.SemiAuto
+  secondaryTriggerMode: TriggerMode.SemiAuto
+
 
 # SMART
 # Base_Palica is semi-auto
+Items.Base_Palica_Technical_Stats:
+  statModifiers:
+    - !append 
+      $base: BaseStats.NumShotsInBurstModifier
+      value: 2
+    - !append 
+      $base: BaseStats.NumShotsInBurstSecondaryModifier
+      value: 2
+    - !append 
+      $base: BaseStats.CycleTime_BurstModifier
+      value: 0.01
+    - !append 
+      $base: BaseStats.CycleTime_BurstSecondaryModifier
+      value: 0.01
+Items.$(name):
+  $instances:
+    - { name: Base_Palica }
+    - { name: Craftable_Common_Palica }
+    - { name: Craftable_Epic_Palica }
+    - { name: Craftable_Legendary_Palica }
+    - { name: Craftable_Rare_Palica }
+    - { name: Craftable_Uncommon_Palica }
+    - { name: Preset_Palica_Default }
+    - { name: Preset_Palica_Military }
+    - { name: Preset_Palica_Neon }
+    - { name: Preset_Palica_Pimp }
+  triggerModes:
+    - TriggerMode.SemiAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
 
 ####################################################################################################
 # Snipers should not have trigger modes but it may be fun for some
@@ -984,7 +985,63 @@ Items.$(name):
 # Rifles should not have trigger modes but it may be fun for some
 
 # Base_Kolac is SemiAuto
+Items.Base_Kolac_Burst_Stats:
+  $base: Items.Base_Kolac_Technical_Stats
+  statModifiers:
+    - $base: BaseStats.CycleTime_BurstModifier
+      value: 0.2 # 0.5
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
+      value: 0.2
+    - $base: BaseStats.NumShotsInBurstModifier
+      value: 3
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
+      value: 3
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Kolac }
+    - { name: Preset_Kolac_Default }
+    - { name: Preset_Kolac_Tiny_Mike }
+    - { name: Preset_Kolac_Tiny_Mike_Legendary }
+  triggerModes:
+    - TriggerMode.SemiAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Kolac_Burst_Stats
 
 # Base_Sor22 is SemiAuto
+Items.Base_Sor22_Burst_Stats:
+  $base: Items.Base_Sor22_Technical_Stats
+  statModifiers:
+    - $base: BaseStats.CycleTime_BurstModifier
+      value: 0.1 # 0.2
+    - $base: BaseStats.CycleTime_BurstSecondaryModifier
+      value: 0.2
+    - $base: BaseStats.NumShotsInBurstModifier
+      value: 3
+    - $base: BaseStats.NumShotsInBurstSecondaryModifier
+      value: 3
+    - BaseStats.ProjectilesPerShotCombinedModifier
+Items.$(name):
+  $instances:
+    - { name: Base_Sor22 }
+    - { name: Craftable_Common_Sor22 }
+    - { name: Craftable_Epic_Sor22 }
+    - { name: Craftable_Legendary_Sor22 }
+    - { name: Craftable_Rare_Sor22 }
+    - { name: Craftable_Uncommon_Sor22 }
+    - { name: Preset_Sor22_Default }
+    - { name: Preset_Sor22_Military }
+    - { name: Preset_Sor22_Neon }
+    - { name: Preset_Sor22_Nusa_Black }
+    - { name: Preset_Sor22_Nusa_White }
+    - { name: Preset_Sor22_Pimp }
+  triggerModes:
+    - TriggerMode.SemiAuto
+    - TriggerMode.Burst
+  secondaryTriggerMode: TriggerMode.Burst
+  statModifierGroups: 
+    - !append-once Items.Base_Sor22_Burst_Stats
 
 # Base_Achilles has SemiAuto and charge

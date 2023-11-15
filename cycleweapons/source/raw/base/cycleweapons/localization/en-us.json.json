@@ -34,6 +34,11 @@
             },
             {
               "$type": "localizationPersistenceOnScreenEntry",
+              "secondaryKey": "Mod-CycleWeapons-Charge",
+              "femaleVariant": "Charge"
+            },
+            {
+              "$type": "localizationPersistenceOnScreenEntry",
               "secondaryKey": "Mod-CycleWeapons-Cycle",
               "femaleVariant": "Change Trigger Mode"
             }
