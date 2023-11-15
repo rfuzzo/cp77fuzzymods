@@ -1,6 +1,6 @@
 // Mod Cycle trigger modes
 // by rfuzzo
-// v1.0
+// v1.1
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // InputContextTransitionEvents
@@ -85,6 +85,7 @@ protected final const func EnterCondition(const stateContext: ref<StateContext>,
 @wrapMethod(CycleTriggerModeEvents)
 protected final func OnEnter(stateContext: ref<StateContext>, scriptInterface: ref<StateGameScriptInterface>) -> Void {
   let player: ref<PlayerPuppet> = scriptInterface.executionOwner as PlayerPuppet;
+  let weaponObject: ref<WeaponObject> = this.GetWeaponObject(scriptInterface);
   
   wrappedMethod(stateContext, scriptInterface);
 
@@ -98,10 +99,16 @@ protected final func OnEnter(stateContext: ref<StateContext>, scriptInterface: r
 @wrapMethod(ReadyEvents)
 protected final func OnEnter(stateContext: ref<StateContext>, scriptInterface: ref<StateGameScriptInterface>) -> Void {
   let player: ref<PlayerPuppet> = scriptInterface.executionOwner as PlayerPuppet;
+  let weaponObject: ref<WeaponObject> = this.GetWeaponObject(scriptInterface);
 
   wrappedMethod(stateContext, scriptInterface);
 
+  // refresh button hints
   PlayerGameplayRestrictions.PushForceRefreshInputHintsEventToPSM(player);
+  // set weapon trigger mode if is different from last time
+  if !Equals(weaponObject.GetCurrentTriggerMode().Type(), weaponObject.m_triggerMode) { 
+    this.SwitchTriggerMode(stateContext, scriptInterface);
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -179,4 +186,15 @@ protected final func OnEnter(stateContext: ref<StateContext>, scriptInterface: r
       statsSystem.GetStatValue(Cast<StatsObjectID>(weaponObject.GetEntityID()), gamedataStatType.CycleTime_Burst), Cast<Int32>(statsSystem.GetStatValue(Cast<StatsObjectID>(weaponObject.GetEntityID()), 
       gamedataStatType.NumShotsInBurst)));
   };
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// WeaponObject
+
+@addField(WeaponObject)
+let m_triggerMode : gamedataTriggerMode;
+
+@addMethod(WeaponObject)
+protected cb func OnWeaponChangeTriggerMode(evt: ref<WeaponChangeTriggerModeEvent>) -> Void {
+  this.m_triggerMode = evt.triggerMode;
 }
