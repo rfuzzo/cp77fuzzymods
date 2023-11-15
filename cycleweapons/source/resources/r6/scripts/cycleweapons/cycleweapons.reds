@@ -1,6 +1,6 @@
 // Mod Cycle trigger modes
 // by rfuzzo
-// v1.1
+// v1.1.1
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // InputContextTransitionEvents
@@ -64,8 +64,8 @@ protected final func RemoveRangedInputHints(stateContext: ref<StateContext>, scr
 // CycleTriggerModeDecisions and CycleTriggerModeEvents, ReadyEvents
 
 // helper method
-@addMethod(CycleTriggerModeDecisions)
-private final func GetWeaponTriggerModesNumber(scriptInterface: ref<StateGameScriptInterface>) -> Int32 {
+@addMethod(WeaponEventsTransition)
+protected final func GetWeaponTriggerModesNumber(scriptInterface: ref<StateGameScriptInterface>) -> Int32 {
   let triggerModesArray: array<wref<TriggerMode_Record>>;
   let item: ref<ItemObject> = scriptInterface.GetTransactionSystem().GetItemInSlot(scriptInterface.executionOwner, t"AttachmentSlots.WeaponRight");
   let itemID: ItemID = item.GetItemID();
@@ -106,7 +106,7 @@ protected final func OnEnter(stateContext: ref<StateContext>, scriptInterface: r
   // refresh button hints
   PlayerGameplayRestrictions.PushForceRefreshInputHintsEventToPSM(player);
   // set weapon trigger mode if is different from last time
-  if !Equals(weaponObject.GetCurrentTriggerMode().Type(), weaponObject.m_triggerMode) { 
+  if this.GetWeaponTriggerModesNumber(scriptInterface) > 1 && !Equals(weaponObject.GetCurrentTriggerMode().Type(), weaponObject.m_triggerMode) { 
     this.SwitchTriggerMode(stateContext, scriptInterface);
   }
 }
@@ -197,4 +197,11 @@ let m_triggerMode : gamedataTriggerMode;
 @addMethod(WeaponObject)
 protected cb func OnWeaponChangeTriggerMode(evt: ref<WeaponChangeTriggerModeEvent>) -> Void {
   this.m_triggerMode = evt.triggerMode;
+}
+
+@wrapMethod(WeaponObject)
+protected cb func OnGameAttached() -> Bool {
+  wrappedMethod();
+
+  this.m_triggerMode = this.GetCurrentTriggerMode().Type();
 }

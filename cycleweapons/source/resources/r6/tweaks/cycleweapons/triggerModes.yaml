@@ -1,6 +1,6 @@
 # Mod Cycle trigger modes
 # by rfuzzo
-# v1.1
+# v1.1.1
 
 
 ####################################################################################################
@@ -157,7 +157,7 @@ Items.$(name):
   statModifierGroups: 
     - !append-once Items.Base_Kyubi_Burst_Stats
 
-# Base_Masamune vanilla is 3-round-Burst, we add FullAuto
+# Base_Masamune vanilla is 3-round-Burst, we add Full-auto
 Items.Base_Masamune_Technical_Stats:
   statModifiers:
     - !append 
