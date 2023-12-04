@@ -1,6 +1,6 @@
 # Mod Cycle trigger modes
 # by rfuzzo
-# v1.1.2
+# v1.1.4
 
 
 ####################################################################################################
@@ -20,7 +20,7 @@ Items.Base_Ajax_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Ajax }
@@ -62,7 +62,7 @@ Items.Base_Copperhead_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Copperhead }
@@ -106,7 +106,7 @@ Items.Base_Kyubi_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Kyubi }
@@ -181,7 +181,7 @@ Items.Base_Umbra_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Umbra }
@@ -216,7 +216,7 @@ Items.Base_Sidewinder_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Sidewinder }
@@ -268,7 +268,7 @@ Items.Base_Guillotine_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Guillotine }
@@ -306,7 +306,7 @@ Items.Base_Pulsar_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Pulsar }
@@ -351,7 +351,7 @@ Items.Base_Saratoga_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Saratoga }
@@ -406,7 +406,7 @@ Items.$(name):
 #       value: 3
 #       modifierType: Additive
 #       statType: BaseStats.NumShotsInBurstSecondary
-#     - BaseStats.ProjectilesPerShotCombinedModifier
+#     
 # Items.$(name):
 #   $instances:
 #     - { name: Base_Borg4a }
@@ -499,7 +499,7 @@ Items.Base_Warden_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Warden }
@@ -540,7 +540,7 @@ Items.Base_Lexington_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Lexington }
@@ -673,7 +673,7 @@ Items.Base_Kappa_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Kappa }
@@ -729,7 +729,7 @@ Items.Base_Crusher_Burst_Stats:
       value: 2
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 2
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Crusher }
@@ -771,7 +771,7 @@ Items.Base_Pozhar_Burst_Stats:
       value: 2
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 2
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Pozhar }
@@ -996,7 +996,7 @@ Items.Base_Kolac_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Kolac }
@@ -1022,7 +1022,7 @@ Items.Base_Sor22_Burst_Stats:
       value: 3
     - $base: BaseStats.NumShotsInBurstSecondaryModifier
       value: 3
-    - BaseStats.ProjectilesPerShotCombinedModifier
+    
 Items.$(name):
   $instances:
     - { name: Base_Sor22 }
